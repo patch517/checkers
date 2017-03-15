@@ -1,16 +1,22 @@
 import './App.styl';
 
-import React from 'react';
+import * as React from 'react';
 import { connect } from 'react-redux';
 
-import injectTapEventPlugin from 'react-tap-event-plugin';
+import * as injectTapEventPlugin from "react-tap-event-plugin";
 
 injectTapEventPlugin();
 
 import GlobalStateComponent from './GlobalStateComponent';
 import LocalStateComponent from './LocalStateComponent';
 
-class App extends React.Component {
+interface Props {
+}
+
+interface State {
+}
+
+class App extends React.Component<Props, State> {
   render () {
     return (
       <div className='app-cmpt'>
@@ -23,9 +29,6 @@ class App extends React.Component {
     );
   }
 }
-
-App.propTypes = {
-};
 
 const mapStateToProps = state => {
   return {

@@ -1,7 +1,14 @@
-import React from 'react';
+import * as React from 'react';
 import { connect } from 'react-redux';
 
-class LocalStateComponent extends React.Component {
+interface Props {
+}
+
+interface State {
+  text: string;
+}
+
+class LocalStateComponent extends React.Component<Props, State> {
   constructor (props) {
     super(props)
     this.state = {
@@ -23,9 +30,6 @@ class LocalStateComponent extends React.Component {
     );
   }
 }
-
-LocalStateComponent.propTypes = {
-};
 
 const mapStateToProps = state => {
   return {

@@ -1,9 +1,17 @@
-import React from 'react';
+import * as React from 'react';
 import { connect } from 'react-redux';
 
 import * as sample from '../reducer/sample';
 
-class GlobalStateComponent extends React.Component {
+interface Props {
+  text: string;
+  setText(arg): void;
+}
+
+interface State {
+}
+
+class GlobalStateComponent extends React.Component<Props, State> {
   handleChange (event) {
     this.props.setText(event.target.value);
   }
@@ -17,11 +25,6 @@ class GlobalStateComponent extends React.Component {
     );
   }
 }
-
-GlobalStateComponent.propTypes = {
-  setText: React.PropTypes.func.isRequired,
-  text: React.PropTypes.string.isRequired
-};
 
 const mapStateToProps = state => {
   return {
