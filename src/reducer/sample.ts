@@ -1,6 +1,10 @@
 export const SET_TEXT = 'auth/SET_TEXT';
 
-const DEFAULT_STATE = {
+interface SAMPLE_INTERFACE_STATE {
+  text: string;
+}
+
+const DEFAULT_STATE: SAMPLE_INTERFACE_STATE = {
   text: ''
 };
 
