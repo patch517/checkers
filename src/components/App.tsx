@@ -20,7 +20,7 @@ class App extends React.Component<Props, State> {
   render () {
     return (
       <div className='app-cmpt'>
-        Textfield component using global state:
+        xi haga:
         <GlobalStateComponent />
         <br /><br /><br />
         Textfield component using local state:
